@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication16
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random rnd = new Random();
+            int year = rnd.Next(2017);
+            Console.WriteLine(year);
+            bool lp1 = year % 4 == 0;
+            bool lp2 = year % 100 != 0;
+            bool lp3 = year % 400 == 0;
+
+            if ((lp1 && lp2) || lp3)
+            
+            {
+                Console.WriteLine("year is a leap");
+            }
+            else
+            {
+                Console.WriteLine("year is not a leap");
+            }
+            
+        }
+
+    }
+}
